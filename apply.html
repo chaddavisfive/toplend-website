@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apply Now | TopLend</title>
+<meta name="description" content="Complete your TopLend loan application online and upload the completed application form.">
+<link rel="stylesheet" href="mynav.css">
+<link rel="stylesheet" href="apply.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="apply-page">
+
+<header class="site-header">
+<nav class="navbar">
+<a class="brand" href="index.html"><img src="logo.png" alt="TopLend"></a>
+<button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a class="nav-cta active" href="apply.html">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="apply-hero">
+  <div class="hero-shape shape-one"></div>
+  <div class="hero-shape shape-two"></div>
+  <div class="hero-shape shape-three"></div>
+  <div class="apply-hero-inner">
+    <div class="apply-kicker">ONLINE APPLICATION</div>
+    <h1>Let’s get your <span>application</span> started.</h1>
+    <p>Complete the key information below. We have kept the online application simple so you can provide the remaining documents and final details when you visit a TopLend office.</p>
+  </div>
+</section>
+
+<div class="apply-wrap">
+  <div class="apply-card">
+    <div class="apply-topbar">
+      <div class="apply-topbar-row">
+        <div class="apply-step-label" id="stepLabel">Step 1 of 5 <span>· Personal Information</span></div>
+        <div class="apply-step-label"><span id="stepPercent">20%</span></div>
+      </div>
+      <div class="apply-progress"><div class="apply-progress-bar" id="progressBar"></div></div>
+    </div>
+
+    <div class="apply-content">
+      <div class="apply-intro">
+        <div>
+          <div class="eyebrow">YOUR APPLICATION</div>
+          <h2>Tell us about yourself.</h2>
+          <p>We only ask for the information needed to start your application. Fields marked <strong>*</strong> are required.</p>
+        </div>
+        <div class="apply-office-note"><strong>What happens later?</strong>The remaining information and documentation can be completed or uploaded when you come into the office to finalise and sign the loan documents.</div>
+      </div>
+
+      <form id="toplendApplication" action="https://formsubmit.co/laoneg@toplend.co.bw" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="New TopLend Loan Application">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+
+        <!-- STEP 1 -->
+        <section class="apply-panel active" data-step="1" data-title="Personal Information">
+          <div class="apply-section-head">
+            <div class="apply-section-number">01</div>
+            <div><h3>Personal Information</h3><p>Start with the basics.</p></div>
+          </div>
+          <div class="apply-grid">
+            <div class="apply-field full">
+              <label for="loan_type">Loan / Financing Product <span class="required">*</span></label>
+              <select id="loan_type" name="Loan / Financing Product" required>
+                <option value="">Select a product</option>
+                <option>Premier Loans</option><option>Government Loans</option><option>Short-Term Loans</option><option>Purchase Order Financing</option><option>Tailored Personal Loans</option>
+              </select>
+            </div>
+            <div class="apply-field">
+              <label for="title">Title</label>
+              <select id="title" name="Title"><option value="">Select</option><option>Mr</option><option>Mrs</option><option>Miss</option><option>Ms</option><option>Dr</option></select>
+            </div>
+            <div class="apply-field"><label for="surname">Surname <span class="required">*</span></label><input id="surname" name="Surname" type="text" autocomplete="family-name" placeholder="Enter your surname" required></div>
+            <div class="apply-field"><label for="first_name">First Name <span class="required">*</span></label><input id="first_name" name="First Name" type="text" autocomplete="given-name" placeholder="Enter your first name" required></div>
+            <div class="apply-field"><label for="id_number">ID No. / Passport <span class="required">*</span></label><input id="id_number" name="ID No. / Passport" type="text" placeholder="Enter ID or passport number" required></div>
+            <div class="apply-field"><label for="dob">Date of Birth <span class="required">*</span></label><input id="dob" name="Date of Birth" type="date" required></div>
+            <div class="apply-field">
+              <label>Gender</label>
+              <div class="apply-choice-row">
+                <div class="apply-choice"><input id="gender-m" type="radio" name="Gender" value="Male"><label for="gender-m">Male</label></div>
+                <div class="apply-choice"><input id="gender-f" type="radio" name="Gender" value="Female"><label for="gender-f">Female</label></div>
+              </div>
+            </div>
+            <div class="apply-field"><label for="marital_status">Marital Status</label><select id="marital_status" name="Marital Status"><option value="">Select</option><option>Single</option><option>Married</option><option>Divorced</option><option>Widowed</option></select></div>
+          </div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="apply-panel" data-step="2" data-title="Addresses & Contact Details">
+          <div class="apply-section-head">
+            <div class="apply-section-number">02</div>
+            <div><h3>Addresses &amp; Contact Details</h3><p>Where can we reach you?</p></div>
+          </div>
+          <div class="apply-grid">
+            <div class="apply-field"><label for="residential_status">Residential Status</label><select id="residential_status" name="Residential Status"><option value="">Select</option><option>Owner</option><option>Rent</option></select></div>
+            <div class="apply-field"><label for="plot">Plot / House Number</label><input id="plot" name="Plot / House Number" type="text" placeholder="e.g. Plot 1234"></div>
+            <div class="apply-field"><label for="district">District</label><input id="district" name="District" type="text" placeholder="District"></div>
+            <div class="apply-field"><label for="city">City / Town</label><input id="city" name="City / Town" type="text" placeholder="City or town"></div>
+            <div class="apply-field full"><label for="physical_address">Physical Address</label><input id="physical_address" name="Physical Address" type="text" placeholder="Street, ward, village or other address details"></div>
+            <div class="apply-field full"><label for="postal_address">Postal Address</label><input id="postal_address" name="Postal Address" type="text" placeholder="P.O. Box or postal address"></div>
+            <div class="apply-field"><label for="work_phone">Work Telephone</label><input id="work_phone" name="Work Telephone" type="tel" placeholder="+267 ..."></div>
+            <div class="apply-field"><label for="mobile">Mobile Number <span class="required">*</span></label><input id="mobile" name="Mobile Number" type="tel" autocomplete="tel" placeholder="+267 ..." required></div>
+            <div class="apply-field"><label for="home_phone">Home Telephone</label><input id="home_phone" name="Home Telephone" type="tel" placeholder="+267 ..."></div>
+            <div class="apply-field"><label for="email">Email Address <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="apply-panel" data-step="3" data-title="Employment Details">
+          <div class="apply-section-head">
+            <div class="apply-section-number">03</div>
+            <div><h3>Employment Details</h3><p>Tell us about your current employment.</p></div>
+          </div>
+          <div class="apply-grid">
+            <div class="apply-field full"><label for="employer">Employer's Name</label><input id="employer" name="Employer's Name" type="text" placeholder="Company / employer name"></div>
+            <div class="apply-field"><label for="workplace">Workplace</label><input id="workplace" name="Workplace" type="text" placeholder="Work location"></div>
+            <div class="apply-field"><label for="occupation">Occupation</label><input id="occupation" name="Occupation" type="text" placeholder="Your occupation"></div>
+            <div class="apply-field"><label for="employment_type">Type of Employment</label><select id="employment_type" name="Type of Employment"><option value="">Select</option><option>Permanent</option><option>Contract</option></select></div>
+            <div class="apply-field"><label for="employment_start">Employment Start Date</label><input id="employment_start" name="Employment Start Date" type="date"></div>
+            <div class="apply-field"><label for="department">Department</label><input id="department" name="Department" type="text" placeholder="Department"></div>
+            <div class="apply-field"><label for="salary_date">Salary Payment Date</label><input id="salary_date" name="Salary Payment Date" type="text" placeholder="e.g. 25th of each month"></div>
+          </div>
+        </section>
+
+        <!-- STEP 4 -->
+        <section class="apply-panel" data-step="4" data-title="Next of Kin">
+          <div class="apply-section-head">
+            <div class="apply-section-number">04</div>
+            <div><h3>Next of Kin</h3><p>Provide a person we can contact if needed.</p></div>
+          </div>
+          <div class="apply-grid">
+            <div class="apply-field full"><label for="next_of_kin">Name &amp; Relationship</label><input id="next_of_kin" name="Next of Kin" type="text" placeholder="Full name and relationship"></div>
+            <div class="apply-field"><label for="kin_phone">Next of Kin Telephone</label><input id="kin_phone" name="Next of Kin Telephone" type="tel" placeholder="+267 ..."></div>
+            <div class="apply-field"><label for="kin_address">Next of Kin Address</label><input id="kin_address" name="Next of Kin Address" type="text" placeholder="Town / village / address"></div>
+          </div>
+        </section>
+
+        <!-- STEP 5 -->
+        <section class="apply-panel" data-step="5" data-title="Application Documents">
+          <div class="apply-section-head">
+            <div class="apply-section-number">05</div>
+            <div><h3>Application Documents</h3><p>Download, complete and upload the official form.</p></div>
+          </div>
+
+          <div class="apply-download">
+            <div class="apply-download-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="apply-download-copy"><strong>TopLend Application Form</strong><span>Download the official form, complete it and save it as a PDF.</span></div>
+            <a href="TopLend_Application_Form.pdf" download>Download <i class="fa-solid fa-download"></i></a>
+          </div>
+
+          <div class="apply-grid">
+            <div class="apply-field full">
+              <div class="apply-upload primary-upload">
+                <label for="application_form">Completed TopLend Application Form <span class="required">*</span></label>
+                <input id="application_form" name="attachment" type="file" accept=".pdf,application/pdf" required>
+                <small>PDF only. The form should be completed before you submit this application.</small>
+              </div>
+            </div>
+            <div class="apply-field full">
+              <div class="apply-upload">
+                <label for="supporting_docs">Supporting Documents <span style="font-weight:500;color:var(--apply-muted)">(Optional)</span></label>
+                <input id="supporting_docs" name="supporting_documents" type="file" accept=".pdf,.jpg,.jpeg,.png">
+                <small>You may also provide supporting documents when you come into the office to finalise the loan documents.</small>
+              </div>
+            </div>
+            <div class="apply-field full"><label for="message">Additional Information <span style="font-weight:500;color:var(--apply-muted)">(Optional)</span></label><textarea id="message" name="Additional Information" placeholder="Anything else you would like TopLend to know?"></textarea></div>
+          </div>
+
+          <div class="apply-check">
+            <input id="confirmation" type="checkbox" name="Applicant Confirmation" value="I confirm that the information provided is accurate" required>
+            <label for="confirmation">I confirm that the information I have provided is accurate and understand that additional information or documentation may be required before the application is finalised.</label>
+          </div>
+        </section>
+
+        <div class="apply-nav">
+          <button class="apply-btn secondary" id="prevBtn" type="button"><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button class="apply-btn primary" id="nextBtn" type="button">Continue <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="apply-btn submit" id="submitBtn" type="submit" style="display:none">Submit Application <i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </form>
+
+      <div class="apply-bottom">
+        <div class="apply-bottom-card"><i class="fa-solid fa-lock"></i><strong>Your information</strong><span>Complete only the key details needed to start your application.</span></div>
+        <div class="apply-bottom-card"><i class="fa-solid fa-building"></i><strong>Finalise in office</strong><span>Remaining documentation can be completed when you visit TopLend.</span></div>
+        <div class="apply-bottom-card"><i class="fa-solid fa-envelope"></i><strong>Application received</strong><span>Submitted applications are forwarded to laoneg@toplend.co.bw.</span></div>
+      </div>
+      <div class="apply-footer-note">Need help? <a href="contact.html">Contact TopLend</a> before submitting your application.</div>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+<div class="container footer-inner">
+<span>© TopLend Financing &amp; Lending (PTY) Ltd</span>
+<span>Gaborone CBD · Palapye · Maun</span>
+</div>
+</footer>
+
+<script>
+const menuButton=document.querySelector('.menu-toggle');
+const navLinks=document.querySelector('.nav-links');
+if(menuButton){menuButton.addEventListener('click',()=>navLinks.classList.toggle('open'));}
+
+const form=document.getElementById('toplendApplication');
+const panels=[...document.querySelectorAll('.apply-panel')];
+const prevBtn=document.getElementById('prevBtn');
+const nextBtn=document.getElementById('nextBtn');
+const submitBtn=document.getElementById('submitBtn');
+const progressBar=document.getElementById('progressBar');
+const stepLabel=document.getElementById('stepLabel');
+const stepPercent=document.getElementById('stepPercent');
+let currentStep=0;
+
+function updateStep(){
+  panels.forEach((panel,index)=>panel.classList.toggle('active',index===currentStep));
+  const step=currentStep+1;
+  const percent=Math.round((step/panels.length)*100);
+  progressBar.style.width=percent+'%';
+  stepPercent.textContent=percent+'%';
+  stepLabel.innerHTML='Step '+step+' of '+panels.length+' <span>· '+panels[currentStep].dataset.title+'</span>';
+  prevBtn.style.visibility=currentStep===0?'hidden':'visible';
+  nextBtn.style.display=currentStep===panels.length-1?'none':'inline-flex';
+  submitBtn.style.display=currentStep===panels.length-1?'inline-flex':'none';
+  window.scrollTo({top:document.querySelector('.apply-card').offsetTop-25,behavior:'smooth'});
+}
+
+function validateCurrentStep(){
+  const fields=panels[currentStep].querySelectorAll('input,select,textarea');
+  for(const field of fields){
+    if(!field.checkValidity()){
+      field.reportValidity();
+      return false;
+    }
+  }
+  return true;
+}
+
+nextBtn.addEventListener('click',()=>{
+  if(!validateCurrentStep()) return;
+  if(currentStep<panels.length-1){currentStep++;updateStep();}
+});
+
+prevBtn.addEventListener('click',()=>{
+  if(currentStep>0){currentStep--;updateStep();}
+});
+
+form.addEventListener('submit',(event)=>{
+  if(!validateCurrentStep()) event.preventDefault();
+});
+
+updateStep();
+</script>
+</body>
+</html>
