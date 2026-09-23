@@ -1,0 +1,209 @@
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fade Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 0s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* Next & Previous Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption Text */
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    
+}
+
+.carousel-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.carousel-content p {
+    font-size: 18px;
+    
+}
+
+/* Dots/bullets */
+.dot-container {
+    text-align: center;
+    padding: 15px;
+    background: #00a79d;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Course Categories Section */
+.course-categories {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: ;
+    background: url("WHITE.jpg") no-repeat center center fixed;
+    background-size: Cover;
+}
+
+.course-categories h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color:   rgb(65, 173, 65);
+    font-style: italic;           
+}
+
+.reverse {
+        display: inline-block; /* Needed to apply the transform */
+        transform: skewX(10deg); /* Slants the text to the left */
+        color:  #007BFF;
+                
+}
+
+/* Grid Layout */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    
+}
+
+/* Individual Category Item Styling */
+.category-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 8px #717171;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    
+    
+}
+
+
+.category-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.category-item h4 {
+    font-size: 18px;
+    margin: 15px 0;
+    color:#333;
+}
+
+.category-item p {
+    padding: 0 15px;
+    color: #666;
+    font-size: 15px;
+    
+
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-content h2 {
+        font-size: 24px;
+    }
+
+    .carousel-content p {
+        font-size: 16px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}

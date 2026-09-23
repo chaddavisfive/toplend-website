@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Government Loan | TopLend</title>
+<meta name="description" content="Government Loan from TopLend. Personal lending for government employees, with a loan limit of BWP 50,000, repayable in 24 months.">
+<link rel="stylesheet" href="mynav.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+/* Same product-page structure and visual language as the Premier Loan page. */
+.loan-hero{
+  position:relative;
+  overflow:hidden;
+  padding:110px 0 90px;
+  background:#f6fbfa;
+}
+.loan-hero .glow{
+  position:absolute;
+  width:420px;height:420px;border-radius:50%;
+  filter:blur(80px);opacity:.18;pointer-events:none;
+}
+.loan-hero .g1{background:#0b9f98;right:-130px;top:-150px}
+.loan-hero .g2{background:#55c9c1;left:-180px;bottom:-220px}
+
+.loan-hero-inner{
+  max-width:1180px;margin:auto;padding:0 24px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;
+  position:relative;z-index:1;
+}
+.loan-eyebrow,.loan-section .eyebrow{
+  color:#078e88;font-size:13px;font-weight:800;letter-spacing:1.8px;
+  margin-bottom:14px;
+}
+.loan-hero h1{
+  margin:0 0 20px;
+  font-size:clamp(48px,6vw,78px);
+  line-height:.98;letter-spacing:-3px;
+  color:#123b39;
+}
+.loan-hero h1 span{color:#079c95}
+.loan-hero-copy{
+  max-width:620px;color:#637270;font-size:18px;line-height:1.75;margin:0 0 28px;
+}
+.loan-amount{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 22px;border:2px solid #079c95;border-radius:999px;
+  color:#006f6b;font-size:23px;font-weight:800;margin-bottom:12px;
+}
+.loan-term{
+  display:block;color:#006f6b;font-size:13px;font-weight:800;letter-spacing:1px;
+  text-transform:uppercase;margin-bottom:28px;
+}
+.loan-actions{display:flex;gap:12px;flex-wrap:wrap}
+.loan-btn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 20px;
+  border-radius:8px;font-weight:700;text-decoration:none;
+  transition:.2s ease;
+}
+.loan-btn-primary{background:#079c95;color:#fff}
+.loan-btn-primary:hover{background:#006f6b;transform:translateY(-1px)}
+.loan-btn-secondary{border:1px solid #d5e7e5;color:#006f6b;background:#fff}
+.loan-btn-secondary:hover{border-color:#079c95}
+
+.loan-visual{
+  position:relative;display:flex;justify-content:center;
+}
+.loan-visual:before{
+  content:"";position:absolute;inset:8% 3%;
+  background:#079c95;opacity:.12;border-radius:28px;transform:rotate(4deg);
+}
+.loan-visual img{
+  position:relative;z-index:1;width:min(100%,440px);display:block;
+  border-radius:14px;box-shadow:0 25px 60px rgba(0,70,67,.18);
+}
+
+.loan-stats{
+  background:#006f6b;color:#fff;
+}
+.loan-stats-inner{
+  max-width:1180px;margin:auto;padding:0 24px;
+  display:grid;grid-template-columns:repeat(2,1fr);
+}
+.loan-stat{padding:27px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.15)}
+.loan-stat:last-child{border-right:0}
+.loan-stat strong{display:block;font-size:28px}
+.loan-stat span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;opacity:.75;margin-top:4px}
+
+.loan-section{padding:90px 0}
+.loan-container{max-width:1180px;margin:auto;padding:0 24px}
+.loan-heading{max-width:700px;margin-bottom:38px}
+.loan-heading h2{
+  margin:0 0 12px;color:#123b39;font-size:clamp(32px,4vw,48px);
+  line-height:1.05;letter-spacing:-1.5px;
+}
+.loan-heading p{margin:0;color:#697876;line-height:1.7}
+
+.requirements-section{background:#f7fbfa}
+.requirements-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;
+}
+.requirement{
+  display:flex;align-items:flex-start;gap:13px;background:#fff;
+  border:1px solid #e0eeec;border-radius:12px;padding:19px 20px;
+}
+.requirement i{
+  flex:0 0 25px;width:25px;height:25px;border-radius:50%;
+  display:grid;place-items:center;background:#e3f5f3;color:#078e88;font-size:12px;
+}
+.requirement span{color:#314744;font-weight:500}
+.loan-warning{
+  max-width:900px;margin-top:25px;padding:18px 20px;
+  border-left:4px solid #079c95;background:#fff;
+  color:#596a68;font-size:14px;line-height:1.6;
+}
+.loan-warning strong{color:#006f6b}
+
+.loan-contact{
+  background:linear-gradient(135deg,#005f5b,#079c95);color:#fff;
+}
+.loan-contact .loan-heading h2{color:#fff}
+.loan-contact .loan-heading p{color:rgba(255,255,255,.82)}
+.contact-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:25px;
+}
+.contact-card{
+  background:#fff;color:#173b39;border-radius:14px;padding:24px;
+}
+.contact-card h3{margin:0 0 16px;color:#006f6b}
+.contact-line{
+  padding:13px 0;border-bottom:1px solid #e4efee;
+}
+.contact-line:last-child{border-bottom:0}
+.contact-line strong{
+  display:block;color:#078e88;font-size:11px;text-transform:uppercase;
+  letter-spacing:1px;margin-bottom:3px;
+}
+.contact-line a{color:#173b39;text-decoration:none}
+
+@media(max-width:850px){
+  .loan-hero{padding:75px 0 65px}
+  .loan-hero-inner{grid-template-columns:1fr;gap:45px}
+  .loan-visual{order:-1}
+  .requirements-grid,.contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .loan-stats-inner{grid-template-columns:1fr}
+  .loan-stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.15)}
+  .loan-stat:last-child{border-bottom:0}
+  .loan-actions .loan-btn{width:100%;justify-content:center}
+  .loan-hero h1{letter-spacing:-2px}
+}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+<nav class="navbar">
+<a class="brand" href="index.html"><img src="logo.png" alt="TopLend"></a>
+<button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a class="active" href="products.html">Products</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a class="nav-cta" href="apply.html">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section class="loan-hero">
+<div class="glow g1"></div><div class="glow g2"></div>
+
+<div class="loan-hero-inner">
+
+<div>
+<div class="loan-eyebrow">GOVERNMENT LENDING</div>
+
+<h1>Government <span>Loan</span></h1>
+
+<p class="loan-hero-copy">
+Personal lending designed for government employees, with a loan limit of BWP 50,000 and a 24-month repayment period.
+</p>
+
+<div class="loan-amount">BWP 50,000</div>
+<span class="loan-term">Repayable in 24 months</span>
+
+<div class="loan-actions">
+<a class="loan-btn loan-btn-primary" href="apply.html">
+Apply Now <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="loan-btn loan-btn-secondary" href="#requirements">
+View Requirements
+</a>
+</div>
+</div>
+
+<div class="loan-visual">
+<!-- Save your Government Loan promotional image as government-loan.png -->
+<img src="governemnt.png" alt="TopLend Government Loan information">
+</div>
+
+</div>
+</section>
+
+<section class="loan-stats">
+<div class="loan-stats-inner">
+
+<div class="loan-stat">
+<strong>BWP 50,000</strong>
+<span>Loan Limit</span>
+</div>
+
+<div class="loan-stat">
+<strong>24 Months</strong>
+<span>Repayment Period</span>
+</div>
+
+</div>
+</section>
+
+<section class="loan-section requirements-section" id="requirements">
+<div class="loan-container">
+
+<div class="loan-heading">
+<div class="eyebrow">REQUIREMENTS</div>
+<h2>What you need to apply.</h2>
+<p>Please prepare the following documents for your Government Loan application.</p>
+</div>
+
+<div class="requirements-grid">
+
+<div class="requirement">
+<i class="fa-solid fa-check"></i>
+<span>Certified copy of ID/Passport</span>
+</div>
+
+<div class="requirement">
+<i class="fa-solid fa-check"></i>
+<span>Employment confirmation letter</span>
+</div>
+
+<div class="requirement">
+<i class="fa-solid fa-check"></i>
+<span>Latest payslip</span>
+</div>
+
+<div class="requirement">
+<i class="fa-solid fa-check"></i>
+<span>2 months bank statements</span>
+</div>
+
+<div class="requirement">
+<i class="fa-solid fa-check"></i>
+<span>Spousal consent (if married)</span>
+</div>
+
+<div class="requirement">
+<i class="fa-solid fa-check"></i>
+<span>Work Permit (Non-Citizens)</span>
+</div>
+
+<div class="requirement">
+<i class="fa-solid fa-check"></i>
+<span>Residents Permit (Non-Citizens)</span>
+</div>
+
+</div>
+
+<div class="loan-warning">
+<strong>Important:</strong>
+Borrowing more than you can afford can lead to severe financial difficulties.
+</div>
+
+</div>
+</section>
+
+<section class="loan-section">
+<div class="loan-container">
+
+<div class="loan-heading">
+<div class="eyebrow">GETTING ASSISTANCE</div>
+<h2>Need help with your Government Loan?</h2>
+<p>Get in touch with TopLend today for assistance with your application.</p>
+</div>
+
+<div class="loan-actions">
+<a class="loan-btn loan-btn-primary" href="apply.html">
+Apply Now <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+<a class="loan-btn loan-btn-secondary" href="contact.html">
+Contact Us <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+
+</div>
+</section>
+
+<section class="loan-section loan-contact">
+<div class="loan-container">
+
+<div class="loan-heading">
+<div class="eyebrow">GET IN TOUCH</div>
+<h2>Talk to TopLend today.</h2>
+<p>Use the contact details below for assistance with the Government Loan.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Palapye</h3>
+<div class="contact-line">
+<strong>Phone</strong>
+<a href="tel:+26778468827">(+267) 78468827 / 74207886</a>
+</div>
+<div class="contact-line">
+<strong>WhatsApp</strong>
+<a href="https://wa.me/26778468827">78468827</a>
+</div>
+</div>
+
+<div class="contact-card">
+<h3>Gaborone</h3>
+<div class="contact-line">
+<strong>Phone</strong>
+<a href="tel:+2673164396">(+267) 3164396 / 72595579</a>
+</div>
+<div class="contact-line">
+<strong>WhatsApp</strong>
+<a href="https://wa.me/26772595579">72595579</a>
+</div>
+</div>
+
+<div class="contact-card">
+<h3>Maun</h3>
+<div class="contact-line">
+<strong>Phone</strong>
+<a href="tel:+26775778477">(+267) 75778477 / 77667316</a>
+</div>
+<div class="contact-line">
+<strong>WhatsApp</strong>
+<a href="https://wa.me/26775778477">75778477</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer-inner">
+<span>© TopLend Financing &amp; Lending (PTY) Ltd</span>
+<span>Gaborone CBD · Palapye · Maun</span>
+</div>
+</footer>
+
+<script>
+const b=document.querySelector('.menu-toggle'),n=document.querySelector('.nav-links');
+if(b && n){b.addEventListener('click',()=>n.classList.toggle('open'));}
+</script>
+
+</body>
+</html>
